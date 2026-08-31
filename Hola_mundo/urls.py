@@ -16,7 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from tutorial.views import mostrar_acerca  # Reemplaza 'tutorial' por el nombre de tu app si es diferente
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', mostrar_acerca, name='inicio'),      # Para entrar directo desde http://127.0.0.1:8000/
+    path('acerca', mostrar_acerca, name='acerca'), # Para entrar desde http://127.0.0.1:8000/acerca
 ]
+

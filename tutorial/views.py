@@ -1,3 +1,4 @@
 from django.shortcuts import render
 
-# Create your views here.
+def mostrar_acerca(request):
+    return render(request, 'about.html')
